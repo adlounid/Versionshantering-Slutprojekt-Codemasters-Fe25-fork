@@ -10,12 +10,67 @@
 </head>
 <body>
 <header>
+ <header style="background-color: #4f46e5; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 0 0 12px 12px;">
+  <style>
+    /* Styling för själva nav-containern */
+    .link-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    /* Styling för länkarna */
+    .link-container a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .link-container a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Fix för Google Translate så den matchar länkarna */
+    #google_translate_element {
+      display: flex;
+      align-items: center;
+    }
+
+    .goog-te-gadget-simple {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      padding: 6px 10px !important;
+      border-radius: 8px !important;
+      cursor: pointer;
+    }
+
+    .goog-te-gadget-simple span, 
+    .goog-te-gadget-simple a {
+      color: white !important;
+      font-size: 14px !important;
+      text-decoration: none !important;
+    }
+
+    /* Döljer Google-loggan för en renare look */
+    .goog-te-gadget img {
+      display: none !important;
+    }
+  </style>
+
   <nav>
     <div class="link-container" id="nav-links">
       <a href="index.html">Home</a>
       <a href="About.html">About</a>
       <a href="Contact.html">Contact</a>
-      <a id="google_translate_element"> </a>
+      <div id="google_translate_element"></div>
     </div>
   </nav>
 </header>
